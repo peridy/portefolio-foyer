@@ -1,0 +1,567 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceuil foyer</title>
+    <link rel="stylesheet" href="acceuil.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <script type="text/javascript" src="acceuil.js" defer></script>
+    </head>
+<body>
+    
+<nav>
+    <ul>
+        <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i>parametre</a>
+        <div class="sous-menu">
+            <ul>
+                <li id="createCompte"><a href="creationCompte.html" target="_blank"><i class="fa fa-file" aria-hidden="true"></i>
+                    Créer un compte</a></li>
+                <li id="creditCompte"><a href="creditCompte.html" target="_blank"><i class="fa fa-credit-card" aria-hidden="true"></i>
+                    Créditer un compte</a></li>
+                <li id="tableauHonte"><a href="tableauHonte.html" target="_blank"><i class="fa fa-table" aria-hidden="true"></i>
+                    Tableau de la honte</a></li>
+                <li id="tarifProduit"><a href="tarifArticles.html" target="_blank"><i class="fa fa-dollar" aria-hidden="true"></i>
+                    Gestion des tarifs</a></li>
+            </ul>
+        </div>
+        </li>
+        <li id="propos"><a href="aProposDe.html" target="_blank"><i class="fa fa-trophy" aria-hidden="true"></i>
+            A propos de</a></li>
+        <li id="deconnexion"><a href="index.html"><i class="fa fa-power-off" aria-hidden="true"></i>
+            Déconnexion</a></li>
+    </ul>
+
+
+</nav>
+<div id="utilisateur">
+    
+    
+    <input type="text" id="txtNom" name="txtNom" placeholder="Renseigne les 1ères lettres de ton nom :" >
+
+        <button id="btnInitNom" name="btnInitNom" >X
+    </button>
+
+        <div id="contenairUtilisateur">
+            
+        </div>
+
+        <div id="blocSolde">
+    <input type="date" id="calendrier" name="calendrier"  >
+    <label for="txtSolde" id="lblSolde" > Bonjour, votre compte est actuellement de :</label>
+    <input type="text" id="txtSolde" name="txtSolde" value="0" disabled>
+    
+    </div>
+</div>
+
+<section>
+<div id="group-btnTab">
+    <div class="btn" >
+        <button id ="cafe" class="bouton "type="button">  <img src="cafe.jpg" height ="70" width="70" /></button>
+        <button id ="the" class="bouton "type="button">  <img src="the.jpg" height ="70" width="70"/></button>
+        <button id ="chocolat" class="bouton "type="button">  <img src="chocolat.jpg" height ="70" width="70" /></button>	
+        <button id ="boisson" class="bouton "type="button">  <img src="boisson.jpg" height ="70" width="70" /></button>
+        <button id ="eau" class="bouton "type="button">  <img src="eau.jpg" height ="70" width="70" /></button>
+        <button id ="glace" class="bouton "type="button">  <img src="glace.jpg" height ="70" width="70" /></button>
+        <button id ="confiserie" class="bouton "type="button">  <img src="confiserie.jpg" height ="70" width="70" /></button>
+        <button id ="madelaine" class="bouton "type="button">  <img src="madelaine.jpg" height ="70" width="70" /></button>
+        
+
+    </div>
+    <div class ="table">
+        <table id="tblCommande"  width="370">
+            <caption >Détail de la commande actuelle</caption>
+            <thead bgcolor="gray">
+                <th>Articles</th>
+                <th>Nb</th>
+                <th>Tarifs</th>
+                <th >Total</th>
+            </thead>
+            <tr ><th>Café</th>	
+                <td id="nbCafe">0</td>
+                <td id="tarifCafe">0.20</td>
+                <td id="totalCafe">0</td>
+            </tr>
+            <tr>
+                <th>Thé</th>	
+                <td id="nbThe">0</td>
+                <td id="tarifThe">0.20</td>
+                <td id="totalThe">0</td>	
+            </tr>
+            <tr>
+                <th>Chocolat</th>	
+                <td id="nbChocolat">0</td>
+                <td id="tarifChocolat">0.25</td>
+                <td id="totalChocolat">0</td>	
+            </tr>
+<tr>
+                <th>Boissons</th>	
+                <td id="nbBoisson">0</td>
+                <td id="tarifBoisson">0.50</td>
+                <td id="totalBoisson">0</td>	
+</tr>
+<tr>
+                <th>Eau</th>	
+                <td id="nbEau">0</td>
+                <td id="tarifEau">0.30</td>
+                <td id="totalEau">0</td>	
+</tr>
+<tr>
+    <th>Glace</th>	
+    <td id="nbGlace">0</td>
+    <td id="tarifGlace">0.60</td>
+    <td id="totalGlace">0</td>	
+</tr>
+<tr>
+                <th>Confiserie</th>	
+                <td id="nbConfiserie">0</td>
+                <td id="tarifConfiserie">0.50</td>
+                <td id="totalConfiserie">0</td>	
+</tr>
+
+<tr>
+                <th>Madelaine</th>	
+                <td id="nbMadelaine">0</td>
+                <td id="tarifMadelaine">0.25</td>
+                <td id="totalMadelaine">0</td>		
+            
+            <tr>
+                <tfooter>
+                <th colspan=3 id="total">Total</th>	
+                <td id="nbTotal">0</td>
+                </tfooter>
+            </tr>			
+                
+
+
+        </table>
+
+
+    </div>
+    
+    <input id="btnValider" class="btnRens" type="button"name="valider" id="valider" value="Valider">
+    <input id="btnAnnuler" class="btnRens" type="reset" name="annuler id="annuler" value="Annuler">
+    
+</div>
+<div id="list-commande">
+    <div class ="table2">
+        <table id="tblHisto" bgcolor="orange" width="370">
+            <caption >Historique des consommations journalières</caption>
+            <thead  bgcolor="gray">
+                <th>Nom</th>
+                <th>Café</th>
+                <th>Thé</th>
+                <th>Chocolat</th>
+                <th>Confiserie</th>
+                <th>Boisson</th>
+                <th>Eau</th>
+                <th>Glace</th>
+                <th>Madelaine</th>
+                <th>Total</th>
+            </thead>
+    <tbody>
+        <tr >
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr ><tr >
+
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr ><tr >
+    
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr ><tr >
+
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr ><tr >
+    
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr ><tr >
+    
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr ><tr >
+    
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr ><tr >
+    
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr ><tr >
+    
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr ><tr >
+    
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr ><tr >
+    
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr ><tr >
+
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr ><tr >
+    
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr ><tr >
+    
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr ><tr >
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr ><tr >
+    
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr ><tr >
+    
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr ><tr >
+    
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr ><tr >
+    
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr ><tr >
+    
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr ><tr >
+    
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr >
+<tr >
+    
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr >
+<tr >
+    
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr >
+<tr >
+    
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr >
+<tr >
+    
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr >
+<tr >
+    
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr >
+<tr >
+    
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr >
+<tr >
+    
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr >
+<tr >
+    
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr >
+<tr >
+    
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr >
+<tr >
+    
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr >
+<tr >
+    
+                <td>PERIDY VINCENT</td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr >
+
+</tbody>
+
+
+
+</div>
+    
+</section>
+</body>
+</html>

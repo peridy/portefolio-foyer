@@ -1,0 +1,72 @@
+#fond{
+	margin:AUTO;
+	background-image:url("back.jpg");
+	background-repeat: no-repeat;
+	background-size:800px auto;
+	width : 800px;
+	height:528px;
+	box-shadow :2px 5px 20px black;
+}
+
+
+header{
+ 	background-color:rgba(0,0,0,0.8);
+	color: white;
+	margin:0px;
+	padding :15px 0 15px 0;
+	width : 800px;
+	height:40px;
+	text-align:center;
+	font-size: 2.4em;
+}
+h2{
+	
+	background-color:red;
+	color: white;
+	margin:0px;
+	padding :5px 0 0 0 ;
+	width : 800px;
+	height:40px;
+	text-align:center;
+
+
+}
+
+fieldset{
+	background-color : white;
+	width: 300px;
+	height:250px;
+	margin:70px 70px;
+	padding : 0px 20px;
+	opacity: 0.9;
+	box-shadow :2px 5px 20px black;
+	border-radius: 10px 10px;	
+}
+hr{
+	border:1px solid grey;
+}
+#envoyer{
+	
+	background: linear-gradient(red,black);
+	color:white;
+	width:150px;
+	height: 40px;
+}
+#envoyer:hover{
+	
+	background: linear-gradient(black,red);
+
+}
+#annuler{
+	background-color:white;
+	width:100px;
+	height: 40px;
+}
+
+#annuler:hover{
+	background-color:grey;
+}
+input:focus{
+	outline:solid 2px lightskyblue;
+	outline-offset: 0;
+}

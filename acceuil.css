@@ -1,0 +1,363 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-image: url(back.jpg);
+	background-size: 1150px 730px;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+nav{
+	background: linear-gradient(0.25turn,red,black);
+	opacity: 0.8;
+	text-align: left;
+	width: 1150px;
+	line-height: 50px;
+	
+	
+}
+nav ul {
+	list-style-type: none;
+	display: inline-flex;
+
+}
+
+
+nav ul li {
+	width: 120px;
+	border-right: 1px solid white;
+	text-align: center;
+	font-size: 0.9em;
+	padding-right: 5px;
+	cursor: pointer;
+}
+nav ul li a{
+
+	text-decoration: none;
+	color: white;
+}
+
+nav .fa{
+	margin-right: 8px;
+	padding-left: 5px;
+}
+
+.sous-menu{
+	display: none;
+	padding-left: 10px;
+
+}
+.sous-menu ul li{
+	text-align: left;
+}
+
+#utilisateur{
+	display: inline-block;
+	width: 1150px;
+	text-align: left;
+	margin-top: 15px;
+	margin-left: 15px;
+	position: relative;
+}
+#btnInitNom{
+
+		width:35px;
+		cursor: pointer;
+		height:37px;
+		border-radius:5px;
+		background-color: red;
+		margin-left: -5px;
+		color: aliceblue;
+
+}
+
+#contenairUtilisateur{
+	
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top:40px;
+	visibility: visible;
+}
+.nom{
+	background-color: bisque;
+	width: 200px;
+	height: 30px;
+	text-align: center;
+	padding-top: 15px;
+	border-bottom: 1px solid black;
+	cursor: pointer;
+	border-radius: 10px;
+
+}
+.nom:hover{
+	background-color: red;
+	color: white;
+}
+section{
+	width:1150px;
+	display:flex;
+}
+label{
+	color: white;
+}
+#lstNom{
+	border-radius :10px;
+	margin-right:10px;
+	width: 400px;
+	height: 30px;
+	background-color:rgb(185, 185, 37);
+	color:black;
+	text-align:center;
+	cursor:pointer;
+}
+
+.btn{
+
+	width: 380px;
+	height:180px;
+	margin: 10px 10px;
+	text-align:center;
+	
+}
+
+.table{
+	border: 2px inset gray;
+	box-shadow: 2px 2px 10px black;
+	width: 380px;
+	height: 330px;
+	margin: 5px;
+	background-color:white;
+	text-align:left;
+	color:white;
+
+	
+
+}
+#tblCommande td ,#tblCommande th{
+	border:2px solid white;
+
+}
+
+
+.btnRens{
+	width:150px;
+	height:35px;
+	font-size:1.3em;
+	float:right;
+	margin-right:10px;
+	margin-top:7px;
+	background: linear-gradient(yellow, green);
+	border-radius:5px;
+	cursor:pointer;
+}
+table{
+	margin:5px;
+	height:280px;
+
+}
+#total{
+	text-align:center;
+	font-size:1.2em;
+	color:black;
+}
+#tblCommande{
+	background: linear-gradient(grey,red);
+	border-collapse:collapse;
+}
+.table2{
+	margin:5px;
+
+	height:720px;
+	opacity: 0.8;
+	text-align:left;
+	color:white;
+}
+caption{
+	color:red;
+	font-size:1.4em;
+
+}
+
+td{
+	text-align:center;
+}
+
+#tblHisto{
+	margin:auto;
+	border:2px solid black;
+	width:650px;
+	border-collapse: collapse;
+	
+}
+#tblHisto td, #tblHisto th{
+	border:1px solid black;
+	
+}
+#tblHisto thead{
+	height:40px;
+
+
+}
+
+
+#tblHisto tr{
+	height:25px;
+}
+#tblHisto tbody  tr:nth-child(2n){
+	background:linear-gradient(MistyRose, white);
+	color:black;
+}
+#tblHisto tbody  tr:nth-child(2n-1){
+	background:linear-gradient(white,DeepSkyBlue);
+	color:black;
+}
+#tblHisto caption{
+	color:white;
+}
+
+thead{
+	color:yellow;
+	text-align:center;
+
+}
+.bouton{
+	width: 80px;
+	height: 80px;
+	margin:5px;
+	border-radius: 10px;
+	line-height: 10px;
+	background-color:white;
+	cursor:pointer;
+}
+img{
+	border-radius: 15px;
+}
+
+
+#group-btnTab{
+	border: 2px inset gray;
+	box-shadow: 2px 2px 10px black;
+	margin:10px;
+	width:400px;
+	HEIGHT:600px;
+}
+
+
+#list-commande{
+	border: 2px inset gray;
+	box-shadow: 2px 2px 10px black;
+
+	margin:10px;
+	width:700px;
+	height:600px;
+	overflow:auto;
+
+}
+#txtNom{
+	width:360px;
+	cursor: pointer;
+	height:30px;
+	font-size:1.2em;
+	border-radius:10px 0px 0px 10px;
+	z-index: -1;
+}
+#txtNom:focus{
+	outline: 1px solid red;
+}
+.fa-solid{
+	font-size:1.2em;
+}
+#blocSolde{
+	float:right;
+	margin-right: 40px;
+}
+#txtSolde{
+	line-height:40px;
+	background: linear-gradient(0.25turn,rgb(255, 208, 0),white);
+	width:100px;
+	border-radius:10px;
+	font-size: 1.3em;
+	color: black;
+	text-align: center;
+	height: 30px;
+}
+
+#lblSolde{
+	font-size:1.2em;
+}
+/*****les evenements */
+
+#calendrier{
+	height:30px;
+	cursor:pointer;
+	background-color:rgb(255, 208, 0);
+	color:rgb(31, 29, 29);
+	border-radius:8px;
+	margin-right: 100px;
+}
+
+.sous-menu ul li:hover .fa{
+	color:green;
+}
+
+nav ul li:hover{
+	background-color: white;
+	border-radius: 3px;
+}
+nav ul li:hover a{
+	color: black;
+}
+
+nav ul li:hover .sous-menu{
+	display: block;
+	position: absolute;
+	left:-10px;
+
+
+}
+nav ul li:hover .sous-menu ul{
+	display: block;
+	background-color: red;
+}
+nav ul li:hover .sous-menu ul li a{
+	color: white;
+}
+nav ul li:hover .sous-menu ul li{
+	width: 200px;
+	border-bottom: 1px solid black;
+
+}
+nav ul li .sous-menu ul li:hover a{
+	color: black;
+}
+nav ul li:hover .sous-menu ul li:last-child{
+	border-bottom: none;
+}
+.bouton:hover{
+	background-color: gray;
+}
+.bouton:active{
+	background-color: red;
+}
+
+#utilisateur #txtNom:hover  {
+	background-color:red;
+	color:white;
+}
+
+.btnRens:hover{
+	border: 2px solid green;
+}
+.btnRens:active{
+	background: linear-gradient(green, yellow);
+}
+
+#calendrier:hover{
+	background: linear-gradient(green, yellow);
+}
+#calendrier:active{
+	background: linear-gradient( yellow,green);
+}
